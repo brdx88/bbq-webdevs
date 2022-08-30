@@ -1,0 +1,17 @@
+body {
+    background-color: #EAF6F6;
+}
+hr {
+    border-style: dotted none none;
+    width: 5%;                         /* ini size keseluruhan border-nya */
+    border-width: 5px;                /* ini size dari setiap motif border-nya */
+    border-color: grey;
+}
+
+h1 {
+    color: #66BFBF;
+}
+
+h3 {
+    color: #66BFBF;
+}

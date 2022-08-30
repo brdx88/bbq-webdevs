@@ -1,0 +1,42 @@
+/*************************** Tag SELECTOR ****************************/
+/* bisa tambahin pseudo selector kayak contoh di selector 'img' */
+
+h1 {
+  color: red;
+  font-size: 200px;
+}
+
+img:hover {
+  border-radius: 8px;
+  background-color: gold;
+}
+
+/*************************** CLASS SELECTOR ****************************/
+/* kalau udah ada Class di CSS, pasti replace 'tag selector' di img */
+/* kalau di Class nama_class bisa ditaruh di mana aja dan di dalam satu class bisa lebih dari 1 nama */
+/* misal, class = "broccoli circular" */
+/* more specific than TAG SELECTOR */
+
+.bacon {
+  background-color: green;
+  border-radius: 8px;
+}
+
+.broccoli {
+  background-color: red;
+  border-radius: 8px;
+}
+
+.circular {
+  border-radius: 100%;
+}
+
+/*************************** ID SELECTOR ****************************/
+/* kalau udah ada ID di CSS, pasti replace 'tag selector' di H1 */
+/* ID itu unique, nama_id engga bisa dipake di lebih dari 1 selector.
+  harus cuma 1 selector di page tersebut  */
+/* more specific than CLASS SELECTOR */
+
+#heading {
+  color: blue;
+}
