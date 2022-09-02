@@ -4,14 +4,16 @@
 	background-color: red;
 	position: relative;
 	left: 220px;
+    display: inline-block;
 }
 
 .blue {
 	height: 100px;
 	width: 100px;
 	background-color: blue;
+    display: inline-block;
     position: relative;
-    bottom: 100px;
+    right: 100px;
 }
 
 .yellow{
@@ -19,6 +21,6 @@
 	width: 100px;
 	background-color: yellow;
     position: relative;
-    bottom: 200px;
-    left: 110px;
+    display: inline-block;
+    right: 100px;
 }
