@@ -76,9 +76,9 @@ a {
 }
 
 .coding {
-    width: 25%;
     float: left;
     margin-right: 30px;
+    width: 25%;
 }
 
 .spicy_wings {
@@ -87,10 +87,11 @@ a {
     margin-left: 30px;
 }
 
-.coding_desc {
-    clear: left;
-}
 
-.wings_desc {
+/* .coding_desc {
+    clear: left;
+} */
+
+/* .wings_desc {
     clear: right;
-}
+} */
