@@ -28,9 +28,14 @@ h3 {
 
 a {
     color: #11999E;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     text-decoration: none;
     font-size: 0.875rem;
+}
+
+a:hover {
+    color: #EAF6F6;
 }
 
 hr {
@@ -38,7 +43,7 @@ hr {
     border-bottom: none;
     border-width: 8px;
     width: 4%;
-    margin: 100px auto 100px;
+    margin: 50px auto 50px;
 }
 
 p {
@@ -53,12 +58,12 @@ p {
 
 .middle_container {
     /* background-color: #F6F6F6; */
-    padding: 100px 0;
+    padding: 100px 0 50px;
 
 }
 
 .bottom_container {
-    /* background-color: #F6F6F6; */
+    background-color: #66BFBF;
     padding: 40px 0 40px;
 }
 
@@ -67,9 +72,9 @@ p {
     margin: 40px auto 40px;
 }
 
-.contact_me {
-    margin-bottom: 50px;
-}
+/* .contact_me {
+    padding-top: 10px;
+} */
 
 .top_cloud {
     position: absolute;
@@ -93,7 +98,7 @@ p {
 
     */
 
-    margin: 100px auto 100px auto;
+    margin: 100px auto 50px auto;
     width: 55%;
     text-align: left;
 
@@ -106,7 +111,7 @@ p {
 }
 
 .intro {
-    width: 30%;
+    width: 40%;
     margin: auto;
 }
 
