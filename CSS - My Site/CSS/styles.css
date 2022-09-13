@@ -34,8 +34,7 @@ a {
 }
 
 hr {
-
-    border: dotted gray 6px;
+    border: dotted #EAF6F6 6px;
     border-bottom: none;
     border-width: 8px;
     width: 4%;
@@ -53,13 +52,13 @@ p {
 }
 
 .middle_container {
-    background-color: #F6F6F6;
-    margin: 100px 0;
+    /* background-color: #F6F6F6; */
+    padding: 100px 0;
 
 }
 
 .bottom_container {
-    background-color: #F6F6F6;
+    /* background-color: #F6F6F6; */
     padding: 40px 0 40px;
 }
 
