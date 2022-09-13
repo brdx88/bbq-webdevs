@@ -23,7 +23,7 @@ h2 {
 h3 {
     color: #11999E;
     font-family: 'Montserrat', sans-serif;
-    margin: 50px auto 50px;
+    margin: 50px auto 0;
 }
 
 a {
@@ -58,7 +58,7 @@ p {
 
 .middle_container {
     /* background-color: #F6F6F6; */
-    padding: 100px 0 50px;
+    padding: 75px 0 25px;
 
 }
 
@@ -69,7 +69,7 @@ p {
 
 .contact_message {
     width: 40%;
-    margin: 40px auto 40px;
+    margin: 40px auto 0;
 }
 
 /* .contact_me {
@@ -98,7 +98,7 @@ p {
 
     */
 
-    margin: 100px auto 50px auto;
+    margin: 0 auto 50px auto;
     width: 55%;
     text-align: left;
 
@@ -106,25 +106,25 @@ p {
 
 }
 
-.me {
-    width: 15%;
-}
-
 .intro {
     width: 40%;
     margin: auto;
 }
 
-.coding {
-    float: left;
-    margin-right: 30px;
+.me {
     width: 15%;
 }
 
-.spicy_wings {
-    width: 15%;
+.coding {
+    float: left;
+    margin-right: 30px;
+    width: 20%;
+}
+
+.pempek {
     float: right;
     margin-left: 30px;
+    width: 20%;
 }
 
 
