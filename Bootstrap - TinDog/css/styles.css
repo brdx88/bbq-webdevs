@@ -15,14 +15,14 @@ body {
 h1 {
   font-family: "Montserrat";
   font-weight: 900;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   line-height: 1.5;
 }
 
 h2 {
     font-family: "Montserrat";
     font-weight: 900;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     line-height: 1.5;
 }
 
@@ -43,7 +43,7 @@ p {
 
 .navbar-brand {
     font-family: "Ubuntu";
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -72,6 +72,18 @@ p {
     transform: rotate(25deg);
     position: absolute;
     left: 55%;
+}
+
+@media (max-width: 1177px) {
+    .title-image {
+        width: 60%;
+        position: static;
+        transform: rotate(0);
+    }
+
+    #title {
+        text-align: center;
+    }
 }
 
 /* icons */
