@@ -9,7 +9,7 @@ body {
 }
 
 .container-fluid {
-  padding: 3% 15%;
+  padding: 3% 15% 7%;
 }
 
 h1 {
@@ -68,8 +68,10 @@ p {
 /* Title Image */
 
 .title-image {
-    width: 60%;
+    width: 21%;
     transform: rotate(25deg);
+    position: absolute;
+    left: 55%;
 }
 
 /* icons */
@@ -86,7 +88,10 @@ p {
 /* FEATURES SECTION */
 
 #features {
-    padding: 7% 15%
+    padding: 7% 15%;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
 }
 
 .feature-box {
@@ -136,4 +141,12 @@ p {
 
 .pricing-column {
     padding: 3% 2%
+}
+
+/* Call to Action Section */
+
+#cta {
+    background-color: #ef8172;
+    text-align: center;
+    padding: 3% 5%;
 }
