@@ -158,7 +158,27 @@ p {
 /* Call to Action Section */
 
 #cta {
-    background-color: #ef8172;
+    background-color: #ff4c68;
     text-align: center;
-    padding: 3% 5%;
+    padding: 5% 25%;
+    color: #fff;
+}
+
+.cta_statement {
+    padding: 30px;
+    font-size: 2rem;
+}
+
+
+/* Footer Section */
+
+#footer {
+    text-align: center;
+    padding: 1% 15%;
+    font-size: 0.8rem;
+    background-color: #fff;
+}
+
+.footer_icon {
+    padding: 1% 1% 2.5%;
 }
