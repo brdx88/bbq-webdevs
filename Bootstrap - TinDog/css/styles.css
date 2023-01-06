@@ -119,7 +119,7 @@ p {
 }
 
 .testimonial-text {
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.5;
 }
 
@@ -142,7 +142,7 @@ p {
 }
 
 .press-logo {
-    width: 15%;
+    width: 50%;
     margin: 20px 20px 50px;
 }
 
@@ -154,7 +154,7 @@ p {
 }
 
 .pricing-text {
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.5;
 }
 
@@ -188,6 +188,7 @@ p {
 
 /* MEDIA QUERY */
 
+/* Tablet Resolution */
 @media (max-width: 1028px) {
     .title-image {
         width: 60%;
@@ -197,5 +198,42 @@ p {
 
     #title .container-fluid{
         text-align: center;
+    }
+
+    .press-logo {
+        width: 50%;
+        margin: 20px 20px 50px;
+    }
+}
+
+/* Mobile Resolution */
+@media (max-width: 500px) {
+    .container-fluid {
+      padding: 7% 10%;
+    }
+
+    #title .container-fluid{
+        padding: 3% 10% 7%;
+        text-align: center;
+    }
+
+    .title-image {
+        width: 60%;
+        position: static;
+        transform: rotate(0);
+    }
+
+    #cta {
+        padding: 5% 10%;
+    }
+
+    .cta_statement {
+        padding: 10%;
+        font-size: 2.5rem;
+    }
+
+    .press-logo {
+        width: 35%;
+        margin: 20px 20px 50px;
     }
 }
