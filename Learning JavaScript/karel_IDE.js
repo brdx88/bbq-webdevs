@@ -28,3 +28,61 @@ function moveAndDrop(){
    putBeeper();
    turnRight();
 }
+
+
+// chess-pattern beeper
+/**
+ * Welcome to the Stanford Karel IDE.
+ * This is a free space for you to
+ * write any Karel program you want.
+ **/
+function main(){
+   beeperOdd();
+
+   maneuverLeft();
+
+   beeperEven();
+
+   maneuverRight();
+
+   beeperOdd();
+
+   maneuverLeft();
+
+   beeperEven();
+
+   maneuverRight();
+
+   beeperOdd();
+}
+
+function beeperOdd(){
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+}
+
+function beeperEven(){
+   move();
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+   move();
+}
+
+function maneuverLeft(){
+   turnLeft();
+   move();
+   turnLeft();
+}
+
+function maneuverRight(){
+   turnRight();
+   move();
+   turnRight();
+}
