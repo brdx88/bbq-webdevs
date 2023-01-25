@@ -20,3 +20,5 @@ function fizzBuzz() {
 
     }
 }
+
+console.log(output)
