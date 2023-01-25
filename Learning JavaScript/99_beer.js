@@ -1,9 +1,13 @@
-
-var num = 100;
-
-while (num >= 0) {
-    num + "bottles of beer on the wall, " + num + " bottles of beer."
-    num--
-    "Take one down and pass it around, " + num + " bottles of beer on the wall."
-    "\n"
+var numberOfBottles = 99
+while (numberOfBottles >= 0) {
+    var bottleWord = "bottle";
+    if (numberOfBottles === 1) {
+        bottleWord = "bottles";
+    }
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall");
+    console.log(numberOfBottles + " " + bottleWord + " of beer,");
+    console.log("Take one down, pass it around,");
+	numberOfBottles--;
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
+    console.log("\n");
 }
