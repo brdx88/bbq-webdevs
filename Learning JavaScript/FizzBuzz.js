@@ -15,9 +15,7 @@ function fizzBuzz() {
         else {
             output.push(count);
         }
-
         count++;
-
     }
 }
 
