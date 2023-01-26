@@ -17,3 +17,4 @@ function fibonacciGenerator (n) {
 
 output = fibonacciGenerator(5);
 console.log(output)
+// 
