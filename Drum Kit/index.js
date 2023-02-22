@@ -64,7 +64,7 @@ function makeSound(key) {
 //////////// function for button animation
 
 function buttonAnimation(currentKey) {
-    var activeButton = document.querySelector("." + currentKey);
+    var activeButton = document.querySelector("." + currentKey);        // karena ngambil class via querySelector harus pake karakter kyk CSS.
     activeButton.classList.add("pressed");
 
     setTimeout(function() {
