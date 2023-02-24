@@ -16,3 +16,6 @@ $("h1").removeClass("big-title");
 
 // addClass multiple
 $("h1").addClass("big-title margin-50");
+
+// manipulating text
+$("h1").text("Bye")
