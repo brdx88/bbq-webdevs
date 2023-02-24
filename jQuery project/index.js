@@ -10,3 +10,6 @@ $(document).ready(function() {
 
 // addClass
 $("h1").addClass("big-title");
+
+// removeClass
+$("h1").removeClass("big-title");
