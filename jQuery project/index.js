@@ -18,4 +18,7 @@ $("h1").removeClass("big-title");
 $("h1").addClass("big-title margin-50");
 
 // manipulating text
-$("h1").text("Bye")
+$("h1").text("Bye");
+
+// checking this element has class what we meant or not
+$("h1").hasClass("margin-50");
