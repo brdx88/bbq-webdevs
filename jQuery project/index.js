@@ -22,3 +22,6 @@ $("h1").text("Bye");
 
 // checking this element has class what we meant or not
 $("h1").hasClass("margin-50");
+
+// add text with attributes
+$("button").html("<em>Hey</em>")
