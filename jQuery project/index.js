@@ -26,5 +26,8 @@ $("h1").hasClass("margin-50");
 // add text with attributes
 $("button").html("<em>Hey</em>");
 
-// manipulating attributes
+// showing the proprty of its class
 $("img").attr("src");
+
+// manipulate the content
+$("img").attr("href", "https://www.yahoo.com");
