@@ -9,6 +9,7 @@ $(".btn").on("click", function(event) {
 
     userClickedPattern.push(userChosenColor);
     // console.log(userClickedPattern)                  CHECK THE ANSWER
+
     playSound(userChosenColor);
 });
 
@@ -19,11 +20,16 @@ function nextSequence() {
     gamePattern.push(randomChosenColor);
 
     $("#" + randomChosenColor).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
-
-    playSound(randomChosenColor)
+    playSound(randomChosenColor);
 }
 
 function playSound(name) {
     var audio = new Audio('sounds/'+ name +'.mp3');
     audio.play();
+}
+
+function animatePress(currentColor) {
+    $("#" + currentColor).addClass("pressed")
+
+    setTimeout(function() {$("#" + currentColor).removeClass("pressed")}, 100)                                                 // delay in miliseconds
 }
