@@ -42,3 +42,8 @@ $("h1").click(function() {
 $("input").keypress(function(event) {
 	console.log(event.key);
 });
+
+// challenge: H1 jadinya punya behaviour untuk menampilkan H1 dengan ketikan kita.
+$(document).keypress(function(event) {
+    console.log($("h1").text(event.key))
+})
