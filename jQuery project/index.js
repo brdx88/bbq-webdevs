@@ -31,3 +31,8 @@ $("img").attr("src");
 
 // manipulate the content
 $("img").attr("href", "https://www.yahoo.com");
+
+// eventListener when Click
+$("h1").click(function() {
+	$("h1").css("color", "purple")
+});
