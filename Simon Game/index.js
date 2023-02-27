@@ -14,12 +14,16 @@ function nextSequence() {
 }
 
 
-// $(".btn").on("click", function(event) {
-//     console.log(event.target.id);
-// });
-
 $(".btn").on("click", function(event) {
     var userChosenColor = event.target.id
+    // var userChosenColour = $(this).attr("id");       ALTERNATIVE
+
     userClickedPattern.push(userChosenColor);
-    console.log(userClickedPattern)
+    // console.log(userClickedPattern)                  CHECK THE ANSWER
 });
+
+
+function playSound(name) {
+    var audio = new Audio('sounds/'+ name +'.mp3');
+    audio.play();
+}
