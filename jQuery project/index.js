@@ -47,3 +47,8 @@ $("input").keypress(function(event) {
 $(document).keypress(function(event) {
     console.log($("h1").text(event.key))
 })
+
+//  using  .On()
+$("h1").on("mouseover", function() {
+	$("h1").css("color", "purple");
+})
