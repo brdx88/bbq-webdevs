@@ -72,3 +72,63 @@ $("h1").append("<button>New</button>");
 
 // erasing all elements
 $("button").remove();
+
+// website animations -- hide
+$("button").on("click", function() {
+	$("h1").hide();
+});
+
+// website animations -- show
+$("button").on("click", function() {
+	$("h1").show();
+});
+
+// website animations -- toggle
+$("button").on("click", function() {
+	$("h1").toggle();
+});
+
+// website animations -- fadeOut
+$("button").on("click", function() {
+	$("h1").fadeOut();
+});
+
+// website animations -- fadeIn
+$("button").on("click", function() {
+	$("h1").fadeIn();
+});
+
+// website animations -- fadeToggle
+$("button").on("click", function() {
+	$("h1").fadeToggle();
+});
+
+// website animations -- slideUp
+$("button").on("click", function() {
+	$("h1").slideUp();
+});
+
+// website animations -- slideDown
+$("button").on("click", function() {
+	$("h1").slideDown();
+});
+
+// website animations -- slideToggle
+$("button").on("click", function() {
+	$("h1").slideToggle();
+});
+
+// website animations -- animate with CSS style
+$("button").on("click", function() {
+	$("h1").animate({opacity: 0.5});
+});
+
+// website animations -- animate with CSS style -- in case the value uses percentage
+$("button").on("click", function() {
+	$("h1").animate({margin: "20%"});
+});
+
+// chaining the animation
+$("button").on("click", function() {
+	$("h1").slideUp().slideDown().animate({margin: "20%"});
+});
