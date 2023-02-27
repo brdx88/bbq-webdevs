@@ -48,7 +48,12 @@ $(document).keypress(function(event) {
     console.log($("h1").text(event.key))
 })
 
-//  using  .On()
+//  using  .On() -- mouseover
 $("h1").on("mouseover", function() {
+	$("h1").css("color", "purple");
+})
+
+// using .On() -- click
+$("h1").on("click", function() {
 	$("h1").css("color", "purple");
 })
