@@ -63,3 +63,9 @@ $("h1").before("<button>New</button>");
 
 // adding elements -- after
 $("h1").after("<button>New</button>");
+
+// adding elements -- prepend
+$("h1").prepend("<button>New</button>");
+
+// adding elements -- append
+$("h1").append("<button>New</button>");
