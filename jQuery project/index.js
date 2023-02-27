@@ -24,4 +24,7 @@ $("h1").text("Bye");
 $("h1").hasClass("margin-50");
 
 // add text with attributes
-$("button").html("<em>Hey</em>")
+$("button").html("<em>Hey</em>");
+
+// manipulating attributes
+$("img").attr("src");
