@@ -69,3 +69,6 @@ $("h1").prepend("<button>New</button>");
 
 // adding elements -- append
 $("h1").append("<button>New</button>");
+
+// erasing all elements
+$("button").remove();
