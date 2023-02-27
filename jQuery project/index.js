@@ -57,3 +57,9 @@ $("h1").on("mouseover", function() {
 $("h1").on("click", function() {
 	$("h1").css("color", "purple");
 })
+
+// adding elements -- before
+$("h1").before("<button>New</button>");
+
+// adding elements -- after
+$("h1").after("<button>New</button>");
