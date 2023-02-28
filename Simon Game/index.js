@@ -53,10 +53,6 @@ function animatePress(currentColor) {
 };
 
 function checkAnswer(currentLevel) {
-    // if (currentLevel != gamePattern[-1]) {
-    //     console.log('failed');
-    // } else console.log('success');
-
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
       console.log("success");
     };
@@ -67,5 +63,10 @@ function checkAnswer(currentLevel) {
         }, 1000);
     } else {
         console.log('wrong');
+        $("#level-title").text("Game Over, Press Any Key to Restart");
+        playSound('wrong');
+
+        $("body").addClass("game-over");
+        setTimeout(function() {$("body").removeClass("game-over")}, 200);
     }
 }
