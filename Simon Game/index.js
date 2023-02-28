@@ -53,14 +53,17 @@ function animatePress(currentColor) {
 };
 
 function checkAnswer(currentLevel) {
+
+    // selain ngecek warna terakhirnya apa,
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
       console.log("success");
-    };
 
-    if (userClickedPattern.length === gamePattern.length) {
-        setTimeout(function () {
-            nextSequence();
-        }, 1000);
+      // ngecek juga jumlah pattern-nya sama gak?
+      if (userClickedPattern.length === gamePattern.length) {
+          setTimeout(function () {
+              nextSequence();
+          }, 1000);
+      }
     } else {
         console.log('wrong');
         $("#level-title").text("Game Over, Press Any Key to Restart");
@@ -68,5 +71,38 @@ function checkAnswer(currentLevel) {
 
         $("body").addClass("game-over");
         setTimeout(function() {$("body").removeClass("game-over")}, 200);
+
+        startOver();
     }
-}
+
+    // EXPLAINATION
+    
+    // gamePattern = ['red', 'red', 'yellow']
+    // userClickedPattern = ['yellow']
+    // ini salah. karena meskipun warna terakhirnya benar, tapi jumlah array-nya beda.
+    //
+    // gamePattern = ['red', 'red', 'yellow']
+    // userClickedPattern = ['red', 'red', 'blue']
+    // ini salah. karena meskipun jumlah array-nya benar, tapi warna terakhirnya salah.
+    //
+    // gamePattern = ['red', 'red', 'yellow']
+    // userClickedPattern = ['red', 'blue']
+    // ini salah. karena ketika click di 'blue' (di userClickedPattern[1]), dicek juga gamePattern[1].
+    // jadi memang conditional-nya ngecek 1-1 per index saat user click warnanya.
+    //
+    //
+    // userClickedPattern.length-1 = 2-1
+    // userClickedPattern.length-1 = 1
+    //
+    // userClickedPattern[userClickedPattern.length-1]
+    // userClickedPattern[1]
+    //
+    // gamePattern[userClickedPattern.length-1]
+    // gamePattern[1]
+};
+
+function startOver() {
+    level = 0;
+    gamePattern = [];
+    started = false;
+};
