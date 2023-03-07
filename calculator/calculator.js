@@ -6,6 +6,9 @@ app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
+app.post('/index.html', function(req, res) {
+    res.send("Thanks for posting!");
+});
 
 
 
