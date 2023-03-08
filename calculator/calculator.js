@@ -11,12 +11,12 @@ app.get('/bmicalculator', function(req, res) {
 });
 
 app.post('/bmicalculator', function(req, res) {
-    var w = Number(req.body.w);
-    var h = Number(req.body.h);
+    var w = parseFloat(req.body.w);
+    var h = parseFloat(req.body.h);
 
-    var result = w/(h*h);
+    var bmi = w/(h*h);
 
-    res.send("Your BMI is " + result);
+    res.send("Your BMI is " + bmi);
 
 });
 
