@@ -4,6 +4,24 @@ const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.urlencoded( {extended: true} ));
 
+
+// BMI Calculator
+app.get('/bmicalculator', function(req, res) {
+    res.sendFile(__dirname + '/bmiCalculator.html');
+});
+
+app.post('/bmicalculator', function(req, res) {
+    var w = Number(req.body.w);
+    var h = Number(req.body.h);
+
+    var result = w/(h*h);
+
+    res.send("Your BMI is " + result);
+
+});
+
+
+// Calculator
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
 });
