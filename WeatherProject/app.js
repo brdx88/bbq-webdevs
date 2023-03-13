@@ -10,6 +10,7 @@ app.get('/', function(req,res) {
         console.log(response);
         console.log("The HTTP status is: " + response.statusCode);
 
+        // hold the data from the response
         response.on("data", function(data) {
 
             // parsing hex code into JSON readability
@@ -17,12 +18,17 @@ app.get('/', function(req,res) {
             console.log(weatherData);
 
             // slicing into specific JSON data
-            const temp = weatherData.weather[0].description
-            console.log(temp)
+            const tempt = weatherData.main.temp;
+            const weatherDescription = weatherData.weather[0].description
+            console.log(tempt)
+
+            res.send("<h1>The temperature is " + tempt + " degrees.</h1><br>The weather is " + weatherDescription)
         });
     });
 
-    res.send("Server is up and running.");
+    // gotta have to comment this below because it'll crash with the 'res.send()' above.
+        // we may using res.send once.
+    // res.send("Server is up and running.");
 });
 
 
