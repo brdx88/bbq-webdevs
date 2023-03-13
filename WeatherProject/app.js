@@ -9,6 +9,11 @@ app.get('/', function(req,res) {
     https.get(url, function(response) {
         console.log(response);
         console.log("The HTTP status is: " + response.statusCode);
+
+        response.on("data", function(data) {
+            const weatherData = JSON.parse(data);
+            console.log(weatherData);
+        });
     });
 
     res.send("Server is up and running.");
