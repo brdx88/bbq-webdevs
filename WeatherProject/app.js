@@ -11,8 +11,14 @@ app.get('/', function(req,res) {
         console.log("The HTTP status is: " + response.statusCode);
 
         response.on("data", function(data) {
+
+            // parsing hex code into JSON readability
             const weatherData = JSON.parse(data);
             console.log(weatherData);
+
+            // slicing into specific JSON data
+            const temp = weatherData.weather[0].description
+            console.log(temp)
         });
     });
 
