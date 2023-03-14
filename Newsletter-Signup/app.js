@@ -15,6 +15,9 @@ app.post('/', function(req, res) {
     var lname = req.body.lastName;
     var email = req.body.emailAddress;
 
+    // API Mailchimp
+    var apiKey = "1d4315c87bc58359facea4eb35cae3a2-us12";
+
     console.log(fname, lname, email);
 });
 
