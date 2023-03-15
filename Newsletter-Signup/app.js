@@ -62,6 +62,10 @@ app.post('/', function(req, res) {
     // request.end();
     // console.log(fname, lname, email);
 
+app.post('/failure', function(req, res) {
+    res.redirect('/');
+});
+
     // --------------------------------------------------------
 });
 
