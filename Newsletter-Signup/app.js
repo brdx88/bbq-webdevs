@@ -62,13 +62,14 @@ app.post('/', function(req, res) {
     // request.end();
     // console.log(fname, lname, email);
 
-app.post('/failure', function(req, res) {
-    res.redirect('/');
-});
 
     // --------------------------------------------------------
 });
 
+
+app.post('/failure', function(req, res) {
+    res.redirect('/');
+});
 
 app.listen(3000, function() {
     console.log('Server is running on port 3000.');
