@@ -34,8 +34,8 @@ app.post('/', function(req, res) {
     // --------------------------------------------------------
     // i guess start from this line (connect to Mailchimp API) is won't work
 
-    // // const apiKey = "? 69848ab844c95dbdc63dc28ac0006c3b-us12";
-    // // const listID = "35d666fb40";
+    // const apiKey = "? 69848ab844c95dbdc63dc28ac0006c3b-us12";
+    // const listID = "35d666fb40";
     // const url = "https://us12.api.mailchimp.com/3.0/lists/35d666fb40";
     //
     // const option = {
@@ -44,6 +44,14 @@ app.post('/', function(req, res) {
     // };
     //
     // const request = https.request(url, options, function(response) {
+    //
+    //     if (response.statusCode === 200) {
+    //         res.sendFile(__dirname + "/success.html");
+    //     } else {
+    //         res.sendFile(__dirname + "/failure.html");
+    //     };
+    //
+    //
     //     response.on("data", function(data) {
     //         console.log(JSON.parse(data));
     //     });
@@ -52,7 +60,7 @@ app.post('/', function(req, res) {
     //
     // request.write(jsonData);
     // request.end();
-    // // console.log(fname, lname, email);
+    // console.log(fname, lname, email);
 
     // --------------------------------------------------------
 });
