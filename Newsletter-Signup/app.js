@@ -11,14 +11,50 @@ app.get('/', function(req, res) {
 });
 
 app.post('/', function(req, res) {
-    var fname = req.body.firstName;
-    var lname = req.body.lastName;
-    var email = req.body.emailAddress;
+    const fname = req.body.firstName;
+    const lname = req.body.lastName;
+    const email = req.body.emailAddress;
 
-    // API Mailchimp
-    var apiKey = "1d4315c87bc58359facea4eb35cae3a2-us12";
+    const data = {
+        members: [
+            {
+                email_address: email,
+                status: "subscribed",
+                merge_fields: {
+                    FNAME: fname,
+                    LNAME: lname
+                }
+            }
+        ]
+    }
 
-    console.log(fname, lname, email);
+    const jsonData = JSON.stringify(data);
+    console.log(jsonData);
+
+    // --------------------------------------------------------
+    // i guess start from this line (connect to Mailchimp API) is won't work
+
+    // // const apiKey = "? 69848ab844c95dbdc63dc28ac0006c3b-us12";
+    // // const listID = "35d666fb40";
+    // const url = "https://us12.api.mailchimp.com/3.0/lists/35d666fb40";
+    //
+    // const option = {
+    //     method: "POST",
+    //     auth: "brdx8:69848ab844c95dbdc63dc28ac0006c3b-us12"
+    // };
+    //
+    // const request = https.request(url, options, function(response) {
+    //     response.on("data", function(data) {
+    //         console.log(JSON.parse(data));
+    //     });
+    // });
+    //
+    //
+    // request.write(jsonData);
+    // request.end();
+    // // console.log(fname, lname, email);
+
+    // --------------------------------------------------------
 });
 
 
