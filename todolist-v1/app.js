@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
-app.use(bodyParse.urlencoded({external: true}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', function(req, res) {
     res.send("Hello");
