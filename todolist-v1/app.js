@@ -9,58 +9,16 @@ app.use(bodyParser.urlencoded({
 
 
 app.get('/', function(req, res) {
-    // res.send("Hello");
+    var today = new Date();
+    var options = {
+        weekday: "long",
+        day: "numeric",
+        month: "long"
+    }
 
-    // ----------------------------------------
-    // longer way
+    var day = today.toLocaleDateString("en-us", options);
 
-    // var today = new Date(); // get date of today, ex: 2023-03-15T08:46:18.878Z
-    // var currentDay = today.getDay(); // get the day, ex: 3 -- day number of week
-    // var day = "";
-    // console.log(today, currentDay);
-
-    // switch (currentDay) {                           // (Sunday - Saturday : 0 - 6)
-    //     case 0:
-    //         day = "Sunday";
-    //         break;
-    //     case 1:
-    //         day = "Monda";
-    //         break;
-    //     case 2:
-    //         day = "Tuesday";
-    //         break;
-    //     case 3:
-    //         day = "Wedesnday";
-    //         break;
-    //     case 4:
-    //         day = "Thursday";
-    //         break;
-    //     case 5:
-    //         day = "Friday";
-    //         break;
-    //     case 6:
-    //         day = "Saturday";
-    //         break;
-    //     default:
-    //         console.log("Error: current day is equal to " + currentDay);
-    // };
-    //
-    // res.render('list', {
-    //     kindOfDay: day
-    // }); // render using EJS. 'list' is the EJS file; 'kindOfDay' is variable in the EJS file.
-
-    // ----------------------------------------
-
-
-    // ----------------------------------------
-    // shorter way
-
-    var dayName = new Date().toLocaleDateString('en-us', {weekday:"long"});     // get the weekday name, ex: Wedesnday
-    console.log(dayName);
-
-    res.render('list', {kindOfDay: dayName});               // render using EJS. 'list' is the EJS file; 'kindOfDay' is variable in the EJS file.
-
-    // ----------------------------------------
+    res.render('list', {kindOfDay: day});               // render using EJS. 'list' is the EJS file; 'kindOfDay' is variable in the EJS file.
 });
 
 
