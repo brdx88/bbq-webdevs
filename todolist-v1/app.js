@@ -21,6 +21,9 @@ app.get('/', function(req, res) {
     res.render('list', {kindOfDay: day});               // render using EJS. 'list' is the EJS file; 'kindOfDay' is variable in the EJS file.
 });
 
+app.post('/', function(req, res) {
+    console.log(req.body.newItem);
+});
 
 
 
