@@ -13,7 +13,7 @@ app.get("/", function(req, res) {
     if (currentDay === 0 || currentDay === 6) {
         res.send("yay it's weekend!");
     } else {
-        res.send("boo it's a weekday!");
+        res.sendFile(__dirname + "/index.html");
     }
 });
 
