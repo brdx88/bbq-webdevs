@@ -3,23 +3,35 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="/css/styles.css">
-        <title></title>
+        <title>Your To Do List</title>
     </head>
     <body>
 
-    <h1> <%= nameOfDay %> </h1>
+    <div class="box" id="heading">
+        <h1> <%= nameOfDay %> </h1>
+    </div>
 
-    <ul>
+    <div class="box">
         <% for (var i=0; i<newListItems.length; i++) { %>
-            <li> <%=newListItems[i]%> </li>
-        <% } %>
-    </ul>
 
-    <!-- cara bacanya: 'post' request to the 'root' route-->
-    <form class="" action="/" method="post">
-        <input type="text" name="newItem">
-        <button type="submit" name="button">Add</button>
-    </form>
+        <div class="item">
+            <input type="checkbox">
+            <p> <%=newListItems[i]%> </p>
+        </div>
+
+        <% } %>
+
+        <!-- cara bacanya: 'post' request to the 'root' route-->
+        <form class="" action="/" method="post">
+            <input type="text" name="newItem" placeholder="new item here" autocomplete="off">
+            <button type="submit" name="button">+</button>
+        </form>
+
+    </div>
+
+
+
+
 
     </body>
 </html>
