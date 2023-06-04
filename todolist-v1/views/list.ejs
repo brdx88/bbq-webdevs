@@ -8,7 +8,7 @@
     <body>
 
     <div class="box" id="heading">
-        <h1> <%= nameOfDay %> </h1>
+        <h1> <%= listTitle %> </h1>
     </div>
 
     <div class="box">
@@ -24,7 +24,7 @@
         <!-- cara bacanya: 'post' request to the 'root' route-->
         <form class="" action="/" method="post">
             <input type="text" name="newItem" placeholder="new item here" autocomplete="off">
-            <button type="submit" name="button">+</button>
+            <button type="submit" name="button" value= <%= listTitle %> >+</button>
         </form>
 
     </div>

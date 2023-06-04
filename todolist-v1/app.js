@@ -4,6 +4,7 @@ const bodyParser = require("body-parser")
 const app = express()
 
 let items = ['Buy Food', 'Cook Food', 'Eat Food'];
+let workItems = [];
 
 app.set('view engine', 'ejs');
 
@@ -21,18 +22,32 @@ app.get("/", function(req, res) {
 
     let day = today.toLocaleDateString('en-US', options);
 
+    // 'list' tuh nama file .ejs nya.
+    // di bawah ini nge-declare variables yang dipake buat .ejs nya
     res.render('list', {
-                        nameOfDay: day,
+                        listTitle: day,
                         newListItems: items
                     });
 });
 
 app.post('/', function(req, res) {
-    let item = req.body.newItem;
-    console.log(item);
-    items.push(item);
+    console.log(req.body);
+    let item = req.body.newItem;            // newItem tuh nama variable yang dipake ketika post something di .ejs
 
-    res.redirect('/');
+    if (req.body.button === "Work") {
+        workItems.push(item);
+        res.redirect('/work');
+    } else {
+        items.push(item);                       // items adalah list di atas yang kita declare di awal.
+        res.redirect('/');
+    }
+})
+
+app.get('/work', function(req,res) {
+    res.render('list', {
+                        listTitle: "Work List",
+                        newListItems: workItems
+                    });
 })
 
 app.listen(3000, function() {
